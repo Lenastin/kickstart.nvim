@@ -380,7 +380,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 local mark = require("harpoon.mark")
 local ui = require("harpoon.ui")
 
-vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<leader>h", mark.add_file)
 vim.keymap.set("n", "<C-e>", ui.toggle_quick_menu)
 
 vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
@@ -477,6 +477,7 @@ mason_lspconfig.setup_handlers {
   end,
 }
 require'lspconfig'.sourcekit.setup{}
+require'lspconfig'.bashls.setup{}
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
