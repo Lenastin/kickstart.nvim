@@ -7,9 +7,14 @@ return {
       mode = 'n',
     },
     {
-      '<Esc>',
+      '†',
       '<C-\\><C-n><CMD>lua require("FTerm").toggle()<CR>',
       mode = 't',
+    },
+    {
+      '<Esc>',
+      '<C-\\><C-n><',
+      mode = 't'
     },
   },
 }
